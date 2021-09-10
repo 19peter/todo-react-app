@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+html {
+    
+}
+
+:root {
+    --nightColor: rgb(37, 39, 60);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h4 {
+    margin-left: 10px;
+    margin-right: 380px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+}
+
+h6 {
+    width: 100%;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    height: 180px;
+    width: 100%;
+}
+
+.body-light {
+    background: white;
+    height: 470px;
+    width: 100%;
+}
+
+.body-dark {
+    background: rgb(24, 24, 36);
+    height: 470px;
+    width: 100%;
+}
+
+.home {
+    height: 550px;
+    width: 500px;
+    z-index: 1000;
+    /* border: 5px solid black; */
+    position: absolute;
+    top: 9%;
+    left: 30%;
+}
+
+
+.header-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* ------------------------------------------------------------------ */
+.input-container {
+    width:100%;
+    height: 40px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    border-radius: 20px;
+}
+
+.input-container-night {
+    width:100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    border-radius: 20px;
+    background: var(--nightColor);
+    color: white;
+}
+/* ------------------------------------------------------------------- */
+.input-btn {
+    width:20px;
+    height: 20px;
+    border:2px solid grey;
+    border-radius:50%;
+    background-color:white;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.input-btn-click {
+    width:20px;
+    height: 20px;
+    border:2px solid grey;
+    border-radius:50%;
+    background: linear-gradient(333deg, rgba(192,88,243,1) 34%, rgba(87,221,255,1) 74%); 
+    cursor: pointer;
+    margin-left: 15px;
+    align-items: center;
+}
+
+
+.check {
+    position: relative;
+    left: 5px;
+    top:1px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* -------------------------------------------------------------------- */
+.input {
+    border: none;
+    margin-left:10px;
+    outline:none;
+    background:transparent;
+    width: 85%;
+    
+}
+
+.input-night {
+    border: none;
+    margin-left:10px;
+    outline:none;
+    background:transparent;
+    color: white;
+    width: 85%;
+}
+/* ------------------------------------------------------------------------- */
+
+.todo-container {
+    width:100%;
+    height: 60px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    border-radius: 5px;
+    border-bottom: 0.5px solid grey;
+    position: relative;
+    top: 30px;
+    
+}
+
+.todo-container-night {
+    width:100%;
+    height: 60px;
+    background: var(--nightColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    border-radius: 5px;
+    border-bottom: 0.5px solid grey;
+    position: relative;
+    top: 30px;
+    color: white;
+}
+
+
+/* ------------------------------------------------------------------- */
+
+.cross-icon {
+    visibility: hidden;
+    width: 5%;
+    height: 40%;
+
+}
+
+.todo-text {
+    width: 80%;
+}
+
+.todo-container:hover > .cross-icon {
+    visibility: visible;
+    
+}
+
+.todo-container-night:hover  > .cross-icon {
+    visibility: visible;
+}
+
+/* --------------------------------------------------------------------------*/
+.footer {
+    width:100%;
+    height: 40px;
+    border-bottom: 1px solid black;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    margin-top: 29px;
+    border-radius: 5px;
+    font-size: 15px;
+
+}
+
+.footer span {
+    width: 75px;
+    padding-right: 50px;    
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer a {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.footer-night {
+    width:100%;
+    height: 40px;
+    border-bottom: 1px solid white;
+    background: var(--nightColor);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    margin-top: 29px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.footer-night span {
+    width: 75px;
+    padding-right: 50px;    
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-night a {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.footer-btn:hover {
+    color: rgba(87,221,255,1);
+}
+
+@media screen and (min-width: 400px) and ( max-width: 600px) {
+    
+    .home {
+        width: 350px;
+        position: absolute;
+        left: 80px
+    }
+
+    .footer span, .footer-night span {
+        font-size: 16px;
+        width: 30px;
+        padding-right: 15px;
+        padding-left: 10px;
+    }
+
+    h6 {
+        width: 50px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 5%;
+        height: 30%;
+    
+    }
+    
+    h4 {
+        font-size: 14px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 15px;
+        height: 15px;
+    }
+
+    .check {
+        width: 9px;
+        height: 9px;
+        position: relative;
+        top: -1.5px;
+        left: 3px;
+        
+    }
+
+}
+
+
