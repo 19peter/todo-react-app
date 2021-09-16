@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+:root {
+    --nightColor: rgb(37, 39, 60);
+    --bodyDarkMode: rgb(24, 24, 36);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h4 {
+    margin-left: 10px;
+    margin-right: 380px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+}
+
+h6 {
+    width: 100%;
+}
+
+.header {
+    height: 300px;
+    width: 100%;
+}
+
+.header-image {
+    height: 300px;
+    width: 100%;
+}
+
+.body-light {
+    background: white;
+    height: 470px;
+    width: 100%;
+}
+
+.body-dark {
+    background: rgb(24, 24, 36);
+    min-height: 490px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.home {
+    height: fit-content;
+    width: 500px;
+    z-index: 1000;
+    position: absolute;
+    top: 9%;
+    left: 33%;
+}
+
+
+.header-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* ------------------------------------------------------------------ */
+.input-container {
+    width:100%;
+    height: 40px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    border-radius: 20px;
+}
+
+.input-container-night {
+    width:100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    border-radius: 20px;
+    background: var(--nightColor);
+    color: white;
+}
+/* ------------------------------------------------------------------- */
+.input-btn {
+    width:20px;
+    height: 20px;
+    border:2px solid grey;
+    border-radius:50%;
+    background-color:white;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.input-btn-click {
+    width:20px;
+    height: 20px;
+    border:2px solid grey;
+    border-radius:50%;
+    background: linear-gradient(333deg, rgba(192,88,243,1) 34%, rgba(87,221,255,1) 74%); 
+    cursor: pointer;
+    margin-left: 15px;
+    align-items: center;
+}
+
+
+.check {
+    position: relative;
+    left: 5px;
+    top:1.5px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* -------------------------------------------------------------------- */
+.input {
+    border: none;
+    margin-left:10px;
+    outline:none;
+    background:transparent;
+    width: 85%;
+    
+}
+
+.input-night {
+    border: none;
+    margin-left:10px;
+    outline:none;
+    background:transparent;
+    color: white;
+    width: 85%;
+}
+/* ------------------------------------------------------------------------- */
+
+.todo-container {
+    width:100%;
+    height: 60px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    border-radius: 5px;
+    border-bottom: 0.5px solid grey;
+    position: relative;
+    top: 30px;
+    overflow-wrap: break-word;    
+}
+
+.todo-container-night {
+    width:100%;
+    height: 60px;
+    background: var(--nightColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    border-radius: 5px;
+    border-bottom: 0.5px solid grey;
+    position: relative;
+    top: 30px;
+    color: white;
+    overflow-wrap: break-word;    
+}
+
+
+/* ------------------------------------------------------------------- */
+
+.cross-icon {
+    visibility: hidden;
+    width: 5%;
+    height: 40%;
+}
+
+.todo-text {
+    width: 80%;
+}
+
+.todo-container:hover > .cross-icon {
+    visibility: visible;
+    
+}
+
+.todo-container-night:hover  > .cross-icon {
+    visibility: visible;
+}
+
+/* --------------------------------------------------------------------------*/
+.footer {
+    width:100%;
+    height: 40px;
+    border-bottom: 1px solid black;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    margin-top: 29px;
+    border-radius: 5px;
+    font-size: 15px;
+
+}
+
+.footer span {
+    width: 75px;
+    padding-right: 50px;    
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer a {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.footer-night {
+    width:100%;
+    height: 40px;
+    border-bottom: 1px solid white;
+    background: var(--nightColor);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    margin-top: 29px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.footer-night span {
+    width: 75px;
+    padding-right: 50px;    
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-night a {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.footer-btn:hover {
+    color: rgba(87,221,255,1);
+}
+
+@media screen and (width: 320px){
+    .home {
+        width: 300px;
+        position: absolute;
+        left: 10px;
+        overflow-x: hidden;
+    }
+
+    .todo-text {
+        max-width: 200px;
+    }
+
+    .footer span, .footer-night span {
+        font-size: 16px;
+        width: 30px;
+        padding-right: 5px;
+        padding-left: 10px;
+    }
+
+    h6 {
+        width: 50px;
+    }
+
+    .todo-text {
+        max-width: 150px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 7%;
+        height: 35%;
+        position: relative;
+        left: 65px;
+    
+    }
+    
+    h4 {
+        font-size: 14px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 15px;
+        height: 15px;
+    }
+
+    .check {
+        width: 9px;
+        height: 9px;
+        position: relative;
+        top: 0.5px;
+        left: 3px;
+        
+    }
+}
+
+@media screen and (width: 375px) {
+    .home {
+        width: 360px;
+        position: absolute;
+        left: 8px;
+        overflow-x: hidden;
+    }
+
+    .todo-text {
+        max-width: 200px;
+    }
+
+    .footer span, .footer-night span {
+        font-size: 16px;
+        width: 30px;
+        padding-right: 35px;
+        padding-left: 10px;
+    }
+
+    h6 {
+        width: 50px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 5%;
+        height: 30%;
+        position: relative;
+        left: 80px;
+    
+    }
+    
+    h4 {
+        font-size: 14px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 15px;
+        height: 15px;
+    }
+
+    .check {
+        width: 9px;
+        height: 9px;
+        position: relative;
+        top: 0.5px;
+        left: 3px;
+        
+    }
+}
+
+@media screen and (width: 425px) {
+    .home {
+        width: 400px;
+        position: absolute;
+        left: 12px;
+        overflow-x: hidden;
+    }
+
+    .todo-text {
+        max-width: 240px;
+    }
+
+    .footer span, .footer-night span {
+        font-size: 16px;
+        width: 30px;
+        padding-right: 80px;
+        padding-left: 10px;
+    }
+
+    h6 {
+        width: 80px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 5%;
+        height: 30%;
+        position: relative;
+        left: 80px;
+    
+    }
+    
+    h4 {
+        font-size: 14px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 15px;
+        height: 15px;
+    }
+
+    .check {
+        width: 9px;
+        height: 9px;
+        position: relative;
+        top: 0.5px;
+        left: 3px;
+        
+    }
+}
+
+@media screen and (width: 478px) {
+    
+    .home {
+        width: 420px;
+        position: absolute;
+        left: 30px
+    }
+
+    .todo-text {
+        max-width: 250px;
+    }
+
+    .footer span, .footer-night span {
+        font-size: 16px;
+        width: 30px;
+        padding-right: 95px;
+        padding-left: 10px;
+    }
+
+    h6 {
+        width: 80px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 4%;
+        height: 30%;
+        position: relative;
+        left: 90px;
+    
+    }
+    
+    h4 {
+        font-size: 14px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 15px;
+        height: 15px;
+    }
+
+    .check {
+        width: 9px;
+        height: 9px;
+        position: relative;
+        top: 0.5px;
+        left: 3px;
+        
+    }
+
+}
+
+@media screen and (width: 768px) {
+    .home {
+        width: 400px;
+        position: absolute;
+        left: 195px
+    }
+
+    .footer span, .footer-night span {
+        font-size: 18px;
+        width: 35px;
+        padding-right: 20px;
+        padding-left: 15px;
+    }
+
+    .todo-text {
+        max-width: 300px;
+    }
+
+    h6 {
+        width: 50px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 4%;
+        height: 30%;
+        position: relative;
+        left: 30px;
+    
+    }
+    
+    h4 {
+        font-size: 14px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 15px;
+        height: 15px;
+    }
+
+    .check {
+        width: 9px;
+        height: 9px;
+        position: relative;
+        top: -0.2px;
+        left: 3px;
+        
+    }
+}
+
+@media screen and (width: 1024px){
+    .home {
+        width: 500px;
+        position: absolute;
+        left: 260px
+    }
+
+    .footer span, .footer-night span {
+        font-size: 18px;
+        width: 35px;
+        padding-right: 120px;
+        padding-left: 15px;
+    }
+
+    h6 {
+        width: 80px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 4%;
+        height: 30%;
+        position: relative;
+        left: 20px;
+    
+    }
+    
+    h4 {
+        font-size: 16px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 15px;
+        height: 15px;
+    }
+
+    .check {
+        width: 9px;
+        height: 9px;
+        position: relative;
+        top: -0.2px;
+        left: 3px;
+        
+    }
+}
+
+@media screen and (width: 1440px) {
+    .home {
+        width: 650px;
+        position: absolute;
+        left: 395px
+    }
+    .footer span, .footer-night span {
+        font-size: 18px;
+        width: 35px;
+        padding-right: 200px;
+        padding-left: 15px;
+    }
+
+    h6 {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 4%;
+        height: 40%;
+        position: relative;
+        left: 30px;
+    
+    }
+    
+    h4 {
+        font-size: 18px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 17px;
+        height: 17px;
+    }
+
+    .check {
+        width: 11px;
+        height: 11px;
+        position: relative;
+        top: 1.5px;
+        left: 3px;
+        
+    }
+}
+
+@media screen and (width: 1920px) {
+    .home {
+        width: 650px;
+        position: relative;
+        left: 620px;
+        top: -200px;
+    }
+
+    .input ,.input-night {
+        height: 50px;
+        font-size: 20px;
+    }
+
+
+    .input-container, .input-container-night {
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .footer, .footer-night {
+        height: 70px;
+    }
+
+    .footer span, .footer-night span {
+        width: 70px;
+        padding-right: 105px;
+        padding-left: 20px;
+    }
+
+    h6 {
+        width: 130px;
+        font-size: 20px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 20px;
+        margin: 0 15px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 4%;
+        height: 40%;
+        position: relative;
+        left: 30px;
+    
+    }
+    
+    h4 {
+        font-size: 23px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 20px;
+        height: 20px;
+    }
+
+    .check {
+        width: 12px;
+        height: 12px;
+        position: relative;
+        top: 4px;
+        left: 3.5px;
+        
+    }
+}
+
+@media screen and (width: 2560px) {
+    .home {
+        width: 1050px;
+        position: relative;
+        left: 720px;
+        top: -200px;
+    }
+
+    .header-title img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer, .footer-night {
+        height: 100px;
+    }
+
+    .footer span, .footer-night span {
+        font-size: 25px;
+        width: 70px;
+        padding-right: 400px;
+        padding-left: 20px;
+    }
+
+    .footer a, .footer-night a {
+        font-size: 25px;
+        margin: 0 15px;
+    }
+
+    .todo-container, .todo-container-night {
+        height: 100px;
+        border-bottom: solid 3px grey;
+    }
+
+    .input ,.input-night {
+        height: 70px;
+        font-size: 30px;
+    }
+
+
+    .input-container, .input-container-night {
+        height: 100px;
+        font-size: 30px;
+    }
+
+    h6 {
+        width: 185px;
+        font-size: 25px;
+    }
+
+    .cross-icon {
+        visibility: hidden;
+        width: 3.5%;
+        height: 40%;
+        position: relative;
+        left: 90px;
+    
+    }
+    
+    h4 {
+        font-size: 30px;
+        padding-left: 10px;
+    }
+
+    .input-btn, .input-btn-click {
+        width: 30px;
+        height: 30px;
+    }
+
+    .check {
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 6px;
+        left: 6px;
+        
+    }
+}
+
